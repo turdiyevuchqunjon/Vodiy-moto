@@ -1,0 +1,33 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" rx="32" fill="#0D0A18"/>
+  <circle cx="220" cy="180" r="140" fill="#EC4899" fill-opacity="0.14"/>
+  <circle cx="990" cy="170" r="180" fill="#F472B6" fill-opacity="0.08"/>
+  <circle cx="600" cy="700" r="200" fill="#DB2777" fill-opacity="0.05"/>
+  <!-- Small moto frame -->
+  <path d="M360 520H470L540 430H690L760 390H810L845 440H920L945 520H900" stroke="#FBCFE8" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Seat -->
+  <path d="M530 428L570 380H700" stroke="#EC4899" stroke-width="12" stroke-linecap="round"/>
+  <!-- Star decorations -->
+  <text x="430" y="380" fill="#F472B6" font-size="28" opacity="0.6">★</text>
+  <text x="780" y="360" fill="#F9A8D4" font-size="22" opacity="0.5">★</text>
+  <text x="330" y="420" fill="#EC4899" font-size="18" opacity="0.4">★</text>
+  <!-- Front wheel (smaller) -->
+  <circle cx="420" cy="520" r="70" stroke="#F1F5F9" stroke-width="14"/>
+  <circle cx="420" cy="520" r="22" fill="#EC4899" fill-opacity="0.35"/>
+  <!-- Rear wheel (smaller) -->
+  <circle cx="870" cy="520" r="70" stroke="#F1F5F9" stroke-width="14"/>
+  <circle cx="870" cy="520" r="22" fill="#EC4899" fill-opacity="0.35"/>
+  <!-- Chain -->
+  <path d="M530 518H770" stroke="#EC4899" stroke-width="10" stroke-linecap="round"/>
+  <!-- Safety flag -->
+  <line x1="920" y1="460" x2="920" y2="340" stroke="#F472B6" stroke-width="4"/>
+  <rect x="922" y="340" width="40" height="28" rx="4" fill="#EC4899" fill-opacity="0.6"/>
+  <!-- Text -->
+  <text x="80" y="120" fill="#F1F5F9" font-family="Arial,sans-serif" font-size="54" font-weight="700">KIDS SERIES</text>
+  <text x="80" y="168" fill="#94A3B8" font-family="Arial,sans-serif" font-size="24">VodiyMoto bolalar motolari</text>
+  <!-- Fun bubbles -->
+  <circle cx="150" cy="500" r="12" fill="#EC4899" fill-opacity="0.15"/>
+  <circle cx="180" cy="470" r="8" fill="#F472B6" fill-opacity="0.12"/>
+  <circle cx="1050" cy="490" r="10" fill="#EC4899" fill-opacity="0.15"/>
+  <circle cx="1080" cy="460" r="6" fill="#F472B6" fill-opacity="0.1"/>
+</svg>

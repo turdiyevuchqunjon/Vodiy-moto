@@ -1,0 +1,28 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" rx="32" fill="#080C18"/>
+  <circle cx="200" cy="180" r="160" fill="#DC2626" fill-opacity="0.15"/>
+  <circle cx="1000" cy="170" r="200" fill="#EF4444" fill-opacity="0.08"/>
+  <circle cx="600" cy="700" r="240" fill="#DC2626" fill-opacity="0.05"/>
+  <!-- Moto body -->
+  <path d="M280 520H430L560 410H760L860 355H940L985 420H1060L1090 520H1020" stroke="#FECACA" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Tank/seat -->
+  <path d="M530 408L590 340H745" stroke="#EF4444" stroke-width="14" stroke-linecap="round"/>
+  <path d="M610 350L680 310H760L800 340" stroke="#DC2626" stroke-width="10" stroke-linecap="round"/>
+  <!-- Front wheel -->
+  <circle cx="350" cy="520" r="90" stroke="#F1F5F9" stroke-width="18"/>
+  <circle cx="350" cy="520" r="28" fill="#DC2626" fill-opacity="0.3"/>
+  <!-- Rear wheel -->
+  <circle cx="950" cy="520" r="90" stroke="#F1F5F9" stroke-width="18"/>
+  <circle cx="950" cy="520" r="28" fill="#DC2626" fill-opacity="0.3"/>
+  <!-- Chain -->
+  <path d="M475 520H830" stroke="#EF4444" stroke-width="12" stroke-linecap="round"/>
+  <!-- Exhaust -->
+  <path d="M870 460L920 470L960 490" stroke="#FCA5A5" stroke-width="8" stroke-linecap="round"/>
+  <!-- Text -->
+  <text x="80" y="120" fill="#F1F5F9" font-family="Arial,sans-serif" font-size="54" font-weight="700">SPORT SERIES</text>
+  <text x="80" y="168" fill="#94A3B8" font-family="Arial,sans-serif" font-size="24">VodiyMoto tezlik va adrenalin</text>
+  <!-- Speed lines -->
+  <line x1="100" y1="380" x2="220" y2="380" stroke="#DC2626" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+  <line x1="120" y1="400" x2="200" y2="400" stroke="#DC2626" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+  <line x1="140" y1="420" x2="230" y2="420" stroke="#DC2626" stroke-width="2" stroke-linecap="round" opacity="0.2"/>
+</svg>

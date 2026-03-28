@@ -1,0 +1,33 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" rx="40" fill="#050A14"/>
+  <circle cx="250" cy="160" r="180" fill="#DC2626" fill-opacity="0.15"/>
+  <circle cx="1300" cy="140" r="220" fill="#EF4444" fill-opacity="0.1"/>
+  <circle cx="800" cy="880" r="320" fill="#DC2626" fill-opacity="0.05"/>
+  <!-- Moto body -->
+  <path d="M220 660H440L570 530H770L880 465H970L1045 545H1170L1220 660H1130" stroke="#FECACA" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Tank -->
+  <path d="M575 528L650 420H800" stroke="#EF4444" stroke-width="16" stroke-linecap="round"/>
+  <path d="M660 430L730 395H810L850 430" stroke="#DC2626" stroke-width="10" stroke-linecap="round"/>
+  <!-- Front wheel -->
+  <circle cx="345" cy="660" r="100" stroke="#F1F5F9" stroke-width="20"/>
+  <circle cx="345" cy="660" r="32" fill="#DC2626" fill-opacity="0.25"/>
+  <!-- Rear wheel -->
+  <circle cx="1050" cy="660" r="100" stroke="#F1F5F9" stroke-width="20"/>
+  <circle cx="1050" cy="660" r="32" fill="#DC2626" fill-opacity="0.25"/>
+  <!-- Chain -->
+  <path d="M510 655H920" stroke="#EF4444" stroke-width="14" stroke-linecap="round"/>
+  <!-- Brand text -->
+  <text x="110" y="155" fill="#F8FAFC" font-family="Arial,sans-serif" font-size="72" font-weight="800">VODIYMOTO</text>
+  <text x="112" y="220" fill="#94A3B8" font-family="Arial,sans-serif" font-size="30">Premium motorcycle showroom</text>
+  <!-- Category pills -->
+  <rect x="112" y="265" width="140" height="48" rx="24" fill="#1C1917" stroke="#DC2626" stroke-width="2.5"/>
+  <text x="145" y="296" fill="#FCA5A5" font-family="Arial,sans-serif" font-size="20" font-weight="700">SPORT</text>
+  <rect x="270" y="265" width="110" height="48" rx="24" fill="#1C1917" stroke="#F97316" stroke-width="2.5"/>
+  <text x="296" y="296" fill="#FDBA74" font-family="Arial,sans-serif" font-size="20" font-weight="700">YUK</text>
+  <rect x="398" y="265" width="180" height="48" rx="24" fill="#1C1917" stroke="#0EA5E9" stroke-width="2.5"/>
+  <text x="424" y="296" fill="#7DD3FC" font-family="Arial,sans-serif" font-size="20" font-weight="700">ELEKTRON</text>
+  <rect x="596" y="265" width="120" height="48" rx="24" fill="#1C1917" stroke="#8B5CF6" stroke-width="2.5"/>
+  <text x="620" y="296" fill="#C4B5FD" font-family="Arial,sans-serif" font-size="20" font-weight="700">MINI</text>
+  <rect x="734" y="265" width="180" height="48" rx="24" fill="#1C1917" stroke="#EC4899" stroke-width="2.5"/>
+  <text x="760" y="296" fill="#F9A8D4" font-family="Arial,sans-serif" font-size="20" font-weight="700">BOLALAR</text>
+</svg>
