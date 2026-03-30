@@ -1,19 +1,27 @@
 /* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next";
+import { Inter } from "next/font/google"; // 1. Shriftni import qilish
 import "./globals.css";
 import Script from "next/script";
 
+// 2. Shriftni sozlash
+const inter = Inter({ subsets: ["latin"] });
+
 export const metadata: Metadata = {
-  title: "VodiyMoto | Mototsikl savdo veb-sayti",
-  description:
-    "Sport, yuk tashuvchi va elektr mototsikllar uchun premium savdo veb-sayti. Leadlar Telegram va amoCRM ga tushadi.",
+  title: "Vodiy Moto",
+  description: "Sifatli mototsikllar va ehtiyot qismlar",
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="uz">
+    // suppressHydrationWarning - brauzer tarjimoni tufayli chiqadigan xatolarni yashiradi
+    <html lang="uz" suppressHydrationWarning>
       <head>
-        {/* Meta Pixel Code - Script komponenti bilan */}
+        {/* Meta Pixel Code */}
         <Script id="fb-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
@@ -29,9 +37,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           `}
         </Script>
       </head>
-      <body>{children}
+      <body className={inter.className} suppressHydrationWarning>
+        {children}
 
-        {/* Noscript qismi - JS ishlamay qolganda */}
+        {/* Noscript qismi */}
         <noscript>
           <img
             height="1"
