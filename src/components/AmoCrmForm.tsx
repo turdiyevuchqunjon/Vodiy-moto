@@ -1,68 +1,99 @@
-"use client";
+'use client';
 
-import { useEffect, useRef } from "react";
-import Script from "next/script";
+import { useEffect, useRef } from 'react';
+import Script from 'next/script';
 
-export function AmoCrmForm() {
+export default function AmoFormCard() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const observerRef = useRef<MutationObserver | null>(null);
 
   useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
+    // Agar iframe allaqachon konteyner ichida bo'lsa, qayta ishga tushirmaymiz
+    if (containerRef.current?.querySelector('iframe')) return;
 
-    let inserted = false;
-
-    const observer = new MutationObserver(() => {
+    const lookForIframe = () => {
+      // Yangi form ID si bo'yicha qidiramiz
       const iframe = document.querySelector<HTMLIFrameElement>(
         'iframe[src*="forms.amocrm.ru"]'
       );
 
-      if (iframe && !inserted) {
-        inserted = true;
+      if (iframe && containerRef.current) {
+        // === IFRAME STYLISTICS ===
+        iframe.style.position = 'static';
+        iframe.style.width = '100%';
+        iframe.style.height = '550px'; // Formaga qarab balandlikni mosladik
+        iframe.style.border = 'none';
+        iframe.style.borderRadius = '15px';
+        iframe.style.overflow = 'hidden';
+        iframe.style.display = 'block';
+        iframe.style.background = 'transparent';
 
-        iframe.style.position = "static";
-        iframe.style.width = "100%";
-        iframe.style.height = "520px";
-        iframe.style.border = "none";
-        iframe.style.borderRadius = "16px";
-        iframe.style.display = "block";
+        // Konteynerni tozalab, iframe-ni uning ichiga ko'chiramiz
+        containerRef.current.innerHTML = '';
+        containerRef.current.appendChild(iframe);
 
-        container.innerHTML = "";
-        container.appendChild(iframe);
+        // Kuzatuvchini to'xtatamiz
+        if (observerRef.current) {
+          observerRef.current.disconnect();
+        }
       }
-    });
+    };
 
-    observer.observe(document.body, {
+    // Dastlabki tekshirish
+    lookForIframe();
+
+    // Sahifada iframe paydo bo'lishini kuzatish
+    observerRef.current = new MutationObserver(lookForIframe);
+    observerRef.current.observe(document.body, {
       childList: true,
       subtree: true,
     });
 
-    return () => observer.disconnect();
+    return () => {
+      if (observerRef.current) observerRef.current.disconnect();
+    };
   }, []);
 
   return (
-    <div className="rounded-3xl border border-white/10 bg-slate-950/70 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.3)] backdrop-blur md:p-8">
-      <div className="mb-6">
-        <p className="inline-flex rounded-full border border-red-500/20 bg-red-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-red-400">
-          Lead form
-        </p>
-        <h3 className="mt-4 text-2xl font-bold text-white">
-          Moto bo&apos;yicha bepul konsultatsiya oling
-        </h3>
-        <p className="mt-2 max-w-xl text-sm leading-6 text-slate-400">
-          Ma&apos;lumotlaringiz to&apos;g&apos;ridan-to&apos;g&apos;ri
-          amoCRM ga yuboriladi. Menejer siz bilan bog&apos;lanadi.
-        </p>
+    <div className="w-full flex justify-center mt-10 px-4">
+      <div 
+        className="w-full max-w-md rounded-3xl shadow-2xl overflow-hidden"
+        style={{
+          background: 'rgba(255, 255, 255, 0.06)',
+          backdropFilter: 'blur(20px)',
+          border: '1px solid rgba(255, 255, 255, 0.08)',
+        }}
+      >
+        {/* Header */}
+        <div className="px-6 pt-6 pb-4">
+          <h2 className="text-white text-2xl font-semibold mb-2">
+            Ma&apos;lumot uchun
+          </h2>
+          <p className="text-gray-400 text-[15px] leading-relaxed">
+            Telefon raqamingizni qoldiring — siz bilan tez orada bog&apos;lanamiz
+          </p>
+        </div>
+
+        {/* Form Container */}
+        <div
+          ref={containerRef}
+          className="px-4 pb-6"
+          style={{ minHeight: '560px' }}
+        >
+          <div className="flex items-center justify-center h-64 text-gray-400 text-sm animate-pulse">
+            Forma yuklanmoqda...
+          </div>
+        </div>
+
+        <div className="text-center pb-4">
+          <span className="text-xs text-gray-500">
+            Powered by amoCRM
+          </span>
+        </div>
       </div>
 
-      {/* amoCRM iframe SHU YERGA tushadi */}
-      <div
-        ref={containerRef}
-        className="overflow-hidden rounded-2xl bg-white"
-        style={{ minHeight: 480 }}
-      />
-
-      <Script id="amo-init" strategy="afterInteractive">
+      {/* --- YANGI AMO CRM SCRIPTS --- */}
+      <Script id="amo-form-init" strategy="afterInteractive">
         {`
           !function(a,m,o,c,r,m){
             a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},
@@ -78,8 +109,10 @@ export function AmoCrmForm() {
       </Script>
 
       <Script
+        id="amoforms_script_1689430"
         src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1774593744"
         strategy="afterInteractive"
+        async
       />
     </div>
   );

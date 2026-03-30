@@ -5,7 +5,6 @@ import { Header } from "@/components/Header";
 import { MotoCard } from "@/components/MotoCard";
 import { SectionTitle } from "@/components/SectionTitle";
 import { companyStats, motoCategories } from "@/data/motos";
-import { AmoCrmForm } from "@/components/AmoCrmForm";
 
 const advantages = [
   {
@@ -188,32 +187,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── LEAD FORM ─── */}
-      <section id="aloqa" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
-          <div className="rounded-3xl border border-white/8 bg-white/3 p-8">
-            <p className="inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">
-              Savdo bo&apos;limi
-            </p>
-            <h2 className="mt-5 text-3xl font-bold text-white">Lid yig&apos;ish bloki</h2>
-            <p className="mt-4 text-base leading-7 text-slate-400">
-              Foydalanuvchi ism, telefon, kategoriya va izoh qoldiradi. Lead marketing manbasi bilan CRM ga yoziladi.
-            </p>
-            <div className="mt-8 space-y-4 text-sm text-slate-400">
-              <div className="rounded-xl border border-white/8 bg-slate-950/60 p-4">
-                <p className="font-semibold text-white">Telegram integratsiya</p>
-                <p className="mt-1.5 leading-6">Har bir yangi so&apos;rov menejerga real vaqt rejimida yuboriladi.</p>
-              </div>
-              <div className="rounded-xl border border-white/8 bg-slate-950/60 p-4">
-                <p className="font-semibold text-white">amoCRM integratsiya</p>
-                <p className="mt-1.5 leading-6">Lead nomi, telefon, kategoriya va source bilan yaratiladi.</p>
-              </div>
-            </div>
-          </div>
-          {/* <LeadForm source="homepage" /> */}
-          <AmoCrmForm />
-        </div>
-      </section>
 
       <Footer />
     </main>
