@@ -43,9 +43,9 @@ export default async function MotoCategoryPage({ params }: PageProps) {
 
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-white/10">
-        <div className={`absolute inset-0 bg-gradient-to-br ${moto.accent}`} />
+        <div className={`absolute inset-0 bg-linear-to-br ${moto.accent}`} />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.06),transparent_40%)]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-950" />
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-slate-950" />
 
         <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1fr_0.9fr] lg:px-8 lg:py-24">
           <div>
@@ -59,13 +59,13 @@ export default async function MotoCategoryPage({ params }: PageProps) {
                 href="#lead"
                 className="inline-flex h-12 items-center justify-center rounded-xl bg-red-600 px-7 text-sm font-semibold text-white shadow-lg shadow-red-600/25 transition hover:bg-red-500"
               >
-                So&apos;rov yuborish
+                Ma&apos;lumot olish uchun
               </a>
               <Link
                 href="/"
                 className="inline-flex h-12 items-center justify-center rounded-xl border border-white/15 bg-white/5 px-7 text-sm font-semibold text-white transition hover:bg-white/10"
               >
-                Bosh sahifaga
+                Mototsikllar bo&apos;yicha ma&apos;lumot
               </Link>
             </div>
           </div>
@@ -85,22 +85,22 @@ export default async function MotoCategoryPage({ params }: PageProps) {
       {/* Specs + Features */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-6 lg:grid-cols-2">
-          <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-7">
+          <div className="rounded-2xl border border-white/8 bg-white/3 p-7">
             <p className="text-xs font-bold uppercase tracking-[0.35em] text-red-400">Texnik ko&apos;rsatkichlar</p>
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
               {moto.specs.map((spec) => (
-                <div key={spec.label} className="rounded-xl border border-white/[0.08] bg-slate-950/60 p-4">
+                <div key={spec.label} className="rounded-xl border border-white/8 bg-slate-950/60 p-4">
                   <p className="text-xs text-slate-500">{spec.label}</p>
                   <p className="mt-1.5 text-lg font-bold text-white">{spec.value}</p>
                 </div>
               ))}
             </div>
           </div>
-          <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-7">
+          <div className="rounded-2xl border border-white/8 bg-white/3 p-7">
             <p className="text-xs font-bold uppercase tracking-[0.35em] text-red-400">Afzalliklar</p>
             <div className="mt-5 grid gap-3">
               {moto.features.map((feature, index) => (
-                <div key={feature} className="flex gap-4 rounded-xl border border-white/[0.08] bg-slate-950/60 p-4">
+                <div key={feature} className="flex gap-4 rounded-xl border border-white/8 bg-slate-950/60 p-4">
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-red-500/10 text-sm font-bold text-red-400">
                     {index + 1}
                   </div>
@@ -113,7 +113,7 @@ export default async function MotoCategoryPage({ params }: PageProps) {
       </section>
 
       {/* Models catalog */}
-      <section className="border-y border-white/5 bg-white/[0.02]">
+      {/* <section className="border-y border-white/5 bg-white/[0.02]">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="inline-flex rounded-full border border-red-500/20 bg-red-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-red-400">
@@ -151,10 +151,10 @@ export default async function MotoCategoryPage({ params }: PageProps) {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Other categories nav */}
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      {/* <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <p className="mb-4 text-xs font-bold uppercase tracking-[0.35em] text-slate-500">Boshqa kategoriyalar</p>
         <div className="flex flex-wrap gap-3">
           {motoCategories
@@ -169,12 +169,12 @@ export default async function MotoCategoryPage({ params }: PageProps) {
               </Link>
             ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Lead form */}
-      <section id="lead" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      {/* <section id="lead" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <LeadForm source={`category:${moto.slug}`} category={moto.name} />
-      </section>
+      </section> */}
 
       <Footer />
     </main>

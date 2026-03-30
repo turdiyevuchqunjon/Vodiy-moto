@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -19,8 +20,15 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-red-500 to-red-700 text-lg font-black text-white shadow-lg shadow-red-500/25">
-            VM
+          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-linear-to-br from-red-500 overflow-hidden to-red-700 text-lg font-black text-white shadow-lg shadow-red-500/25">
+          <Image
+            src="/logo.JPG" // Public papkasidagi fayl nomi
+            alt="Vodiy Moto Logo"
+            width={150}      // Logotip kengligi (pikselda)
+            height={50}      // Logotip balandligi (pikselda)
+            priority         // Sayt yuklanganda birinchi bo'lib yuklanishi uchun
+            className="object-contain" // Rasm asl shaklini yo'qotmasligi uchun
+          />
           </div>
           <div>
             <p className="text-lg font-bold tracking-wide text-white">VodiyMoto</p>
