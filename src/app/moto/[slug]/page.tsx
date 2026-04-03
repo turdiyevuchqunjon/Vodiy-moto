@@ -4,7 +4,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { LeadForm } from "@/components/LeadForm";
 import { getMotoBySlug, motoCategories } from "@/data/motos";
 
 type PageProps = {
@@ -47,7 +46,7 @@ export default async function MotoCategoryPage({ params }: PageProps) {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.06),transparent_40%)]" />
         <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-slate-950" />
 
-        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1fr_0.9fr] lg:px-8 lg:py-24">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-8 sm:px-6 lg:grid-cols-[1fr_0.9fr] lg:px-8 lg:py-24">
           <div>
             <p className="inline-flex rounded-full border border-white/10 bg-black/30 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-white/80">
               {moto.shortName} yo&apos;nalishi
@@ -56,17 +55,12 @@ export default async function MotoCategoryPage({ params }: PageProps) {
             <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-200/80">{moto.description}</p>
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="#lead"
-                className="inline-flex h-12 items-center justify-center rounded-xl bg-red-600 px-7 text-sm font-semibold text-white shadow-lg shadow-red-600/25 transition hover:bg-red-500"
+                href="#form"
+                className="inline-flex h-12 items-center justify-center rounded-xl bg-green-600 px-7 text-sm font-semibold text-white shadow-lg shadow-red-600/25 transition hover:bg-green-500"
               >
                 Ma&apos;lumot olish uchun
               </a>
-              <Link
-                href="/"
-                className="inline-flex h-12 items-center justify-center rounded-xl border border-white/15 bg-white/5 px-7 text-sm font-semibold text-white transition hover:bg-white/10"
-              >
-                Mototsikllar bo&apos;yicha ma&apos;lumot
-              </Link>
+           
             </div>
           </div>
           <div className="rounded-3xl border border-white/10 bg-black/20 p-3 backdrop-blur">
@@ -83,19 +77,9 @@ export default async function MotoCategoryPage({ params }: PageProps) {
       </section>
 
       {/* Specs + Features */}
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid gap-6 lg:grid-cols-2">
-          <div className="rounded-2xl border border-white/8 bg-white/3 p-7">
-            <p className="text-xs font-bold uppercase tracking-[0.35em] text-red-400">Texnik ko&apos;rsatkichlar</p>
-            <div className="mt-5 grid gap-3 sm:grid-cols-2">
-              {moto.specs.map((spec) => (
-                <div key={spec.label} className="rounded-xl border border-white/8 bg-slate-950/60 p-4">
-                  <p className="text-xs text-slate-500">{spec.label}</p>
-                  <p className="mt-1.5 text-lg font-bold text-white">{spec.value}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+      <section className="mx-auto max-w-7xl px-4 py-8 ">
+        <div className="flex justify-center items-center">
+   
           <div className="rounded-2xl border border-white/8 bg-white/3 p-7">
             <p className="text-xs font-bold uppercase tracking-[0.35em] text-red-400">Afzalliklar</p>
             <div className="mt-5 grid gap-3">
@@ -176,7 +160,9 @@ export default async function MotoCategoryPage({ params }: PageProps) {
         <LeadForm source={`category:${moto.slug}`} category={moto.name} />
       </section> */}
 
+<div id="form">
       <Footer />
+</div>
     </main>
   );
 }

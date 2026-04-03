@@ -21,11 +21,11 @@ export type MotoCategory = {
 export const motoCategories: MotoCategory[] = [
   {
     slug: "sport",
-    name: "Sport moto",
+    name: "Sport Mototsikllari",
     shortName: "Sport",
     tagline: "Tezlik, dizayn va adrenalinni bir joyda his qiling",
     description:
-      "Shaharda ham, magistralda ham kuchli yurish uchun zamonaviy sport mototsikllar. Yoshlar va premium segment uchun ajoyib yechim.",
+      "Tezlik, dizayn va adrenalinni bir vaqtda his qiling. Dunyoga mashhur brendlarning (Ducati, Kawasaki, BMW) muhandislik durdonalari endi sizning ixtiyoringizda. Bu shunchaki mototsikl emas, bu sizning xarakteringiz aksidir.",
     image: "/motos/sport.svg",
     accent: "from-red-600/30 via-rose-500/20 to-transparent",
     accentBorder: "hover:border-red-400/40",

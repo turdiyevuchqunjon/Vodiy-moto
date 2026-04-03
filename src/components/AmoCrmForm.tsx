@@ -55,7 +55,7 @@ export default function AmoFormCard() {
   }, []);
 
   return (
-    <div className="w-full flex justify-center mt-10 px-4">
+    <div className="w-full flex justify-center mt-4 px-4">
       <div 
         className="w-full max-w-md rounded-3xl shadow-2xl overflow-hidden"
         style={{
@@ -78,7 +78,7 @@ export default function AmoFormCard() {
         <div
           ref={containerRef}
           className="px-4 pb-6"
-          style={{ minHeight: '560px' }}
+          style={{ minHeight: '400px' }}
         >
           <div className="flex items-center justify-center h-64 text-gray-400 text-sm animate-pulse">
             Forma yuklanmoqda...
